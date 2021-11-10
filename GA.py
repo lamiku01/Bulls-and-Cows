@@ -11,12 +11,15 @@ n = len(secretKey)
 
 def newBit(minSet,maxSet):
     c = random.randint(minSet,maxSet)
+    s = random.randint(0,5)
     if(c==0):
         temp = random.randint(0,9)
         val = chr(temp + 48)
     elif(c==1):
         temp = random.randint(0,25)
         val = chr(temp+97)
+    if (s==1):
+        val = chr(32)
     return(val)
 
 #track what values are being considered, range is ascii values.
